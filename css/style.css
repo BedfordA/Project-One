@@ -1,0 +1,14 @@
+#mainTitle {
+    font-size: 75px;
+    text-align: center;
+    color: white;
+    background-color: rgb(105, 105, 105);
+}
+body {
+    background-color: rgb(255,71,31);
+}
+.col-sm {
+    border: 3px solid black;
+    height: 200px;
+    margin-top: 50px; 
+}
