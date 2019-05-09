@@ -9,21 +9,37 @@ const cardsList = [
         image: 'images/Heihachi.jpg',
     },
     {
-        name: 'Jin Kazama',
-        image: 'images/Jin.jpg',
+        name: 'Anna Williams',
+        image: 'images/Anna.jpg',
     },
+    {
+        name: 'Paul',
+        image: 'images/Paul.jpg',
+    },
+
     {
         name: 'Heihachi Kazama',
         image: 'images/Heihachi.jpg',
     },
     {
         name: 'Anna Williams',
-        image: 'images/Anna,jpg', 
-    }
-   
+        image: 'images/Anna.jpg',
+    },
+    {
+        name: 'Paul',
+        image: 'images/Paul.jpg',
+    },
+    {
+        name: 'Jin Kazama',
+        image: 'images/Jin.jpg',
+    },
+
+
 ]
 
-var cardsInPlay = []; 
+var cardsInPlay = [
+
+];
 
 var createBoard = function () {
     for (var i = 0; i < cardsList.length; i++) {
@@ -32,22 +48,29 @@ var createBoard = function () {
         cardElement.setAttribute('data-id', i);
         cardElement.setAttribute('class', 'col-sm')
         cardElement.addEventListener('click', flipCard);
-        document.getElementsByClassName('container')[1].appendChild(cardElement);
+        document.getElementsByClassName('row')[1].appendChild(cardElement);
+
     }
 }
 
-var flipCard = function(){
-	var cardId = this.getAttribute('data-id');
-	cardsInPlay.push(cardsList[cardId].name);
-	this.setAttribute('src', cardsList[cardId].image)
-	if (cardsInPlay.length === 2){
-		checkForMatch()
-	}
+var flipCard = function () {
+    var cardId = this.getAttribute('data-id');
+    cardsInPlay.push(cardsList[cardId].name);
+    this.setAttribute('src', cardsList[cardId].image)
+    if (cardsInPlay.length === 2) {
+        checkForMatch()
+    }
 }
 
 // This is the function that checks to see if the cards match when you click them 
 var checkForMatch = function () {
-    if (cardsInPlay[0] === cardsInPlay[1]) { alert("You found a match!"); }
+    if (cardsInPlay[0] === cardsInPlay[1]) {
+        myScore += 1;
+        console.log(myScore);
+        cardsInPlay.pop();
+        cardsInPlay.pop();
+        console.log(cardsInPlay);
+    }
     else { alert("Sorry, try again."); }
 }
 
@@ -55,13 +78,26 @@ var checkForMatch = function () {
 
 //Timer Functions
 var someTime = setInterval(myTimer, 1000);
+//this holds your time
 var myTime = 0;
-var myScore = 0; 
+//this holds your score 
+var myScore = 0;
 function myTimer() {
     myTime += 1;
     var t = myTime;
     document.getElementById("timer").innerHTML = t;
+    var s = myScore;
+    document.getElementById("score").innerHTML = s;
+    if (myTime === 30 && myScore != 4) {
+        clearInterval(someTime);
+        alert('Your time is up!! Game Over!!');
+    } else if (myScore === 4) {
+        clearInterval(someTime);
+        alert('You Win!!! Good Job')
+    }
 }
+
+
 function myStopFunction() {
     clearInterval(someTime);
 }

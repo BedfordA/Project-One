@@ -8,9 +8,37 @@ body {
     background-color: rgb(255,71,31);
 }
 .col-sm {
-    border: 3px solid black;
+    border: 2px solid black;
     height: 200px;
-    margin-top: 50px; 
+    width: 200px;
+    margin: 10px; 
+    background-color: black;
 }
-
+.col-sm:hover {
+	    border-color: white;
+	    background-position: left -5px;
+	}
+button {
+	    border: 1px solid #9f9b9a;
+	    border-radius: 5px;
+	   
+	    font-size: inherit;
+	    padding: 0.1em 0.5em 0.1em 0.5em;
+	    cursor: default;
+	    vertical-align:top;
+	}
+	button:hover {
+	    border-color: black;
+	    background-position: left -5px;
+	}
+	button:active {
+	    line-height:0.7em;
+    padding: 0.6em 0.2em 0.1em 0.8em;
+    }
+    
+#buttonDiv{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
 
