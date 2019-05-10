@@ -27,5 +27,5 @@ The game is over when all the cards have been matched.
 
 Next Steps: 
 Future enhancements for the game is to make it an educational memory game where when a matching set is made, an important educational fact will prompt relevant to the matching set. 
-![cardGame screenshot](images/Screen Shot 2019-05-10 at 7.17.14 AM.png)
+![cardGame screenshot](https://raw.githubusercontent.com/BedfordA/Project-One/master/images/Screen%20Shot%202019-05-10%20at%207.17.14%20AM.png)
 
