@@ -71,7 +71,7 @@ var checkForMatch = function () {
         cardsInPlay.pop();
         console.log(cardsInPlay);
     }
-    else { alert("Sorry, try again."); }
+    else { alert("Sorry, try again. Press ok then, CMD+R or CTRL + R to restart game."); }
 }
 
 
