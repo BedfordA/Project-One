@@ -43,7 +43,7 @@ button {
 }
 #timerText {
         font-size: 40px;
-        font-family: 
+        font-family: /* <- Looks like we're missing a property value here - this might cause an error*/
 }
 #scoreText {
         font-size: 50px;

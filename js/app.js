@@ -1,4 +1,4 @@
-console.log("hello world")
+console.log("hello world") // It's advisable to remove this console logs before you ship your code
 const cardsList = [
     {
         name: 'Jin Kazama',
@@ -70,6 +70,11 @@ var checkForMatch = function () {
         cardsInPlay.pop();
         cardsInPlay.pop();
         console.log(cardsInPlay);
+
+        /*
+         * It's advisable to remove console logs ^lines(69 - 72) 
+         * before you ship your code
+         */
     }
     else { alert("Sorry, try again. Press ok then, CMD+R or CTRL + R to restart game."); }
 }
